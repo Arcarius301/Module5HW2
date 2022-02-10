@@ -12,6 +12,13 @@ services:
       - PathBase=http://www.alevelwebsite.com:5000
     ports:
       - 5000:5000
+  nginx:
+    image: nginx
+    container_name: module5hw2.nginx
+    ports:
+      - 80:80
+    volumes:
+      - ./Proxy/nginx/conf:/etc/nginx/conf
 networks:
   dockernet:
     external: true
